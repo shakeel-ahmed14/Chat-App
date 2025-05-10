@@ -1,6 +1,10 @@
+import dotenv from "dotenv";
+dotenv.config();
+console.log("Loaded ENV:", process.env.MONGO_DB_URI);
+
+
 import path from "path";
 import express from "express";
-import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 
 import authRoutes from "./routes/auth.routes.js";
@@ -10,7 +14,8 @@ import userRoutes from "./routes/user.routes.js";
 import connectToMongoDB from "./db/connectToMongoDB.js";
 import { app, server } from "./socket/socket.js";
 
-dotenv.config();
+
+
 
 const __dirname = path.resolve();
 // PORT should be assigned after calling dotenv.config() because we need to access the env variables. Didn't realize while recording the video. Sorry for the confusion.
