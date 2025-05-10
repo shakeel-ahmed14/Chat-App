@@ -1,6 +1,5 @@
 import dotenv from "dotenv";
 dotenv.config();
-console.log("Loaded ENV:", process.env.MONGO_DB_URI);
 
 
 import path from "path";
